@@ -1,0 +1,29 @@
+{
+  "name": "pastex-backend",
+  "version": "1.0.0",
+  "description": "Backend for PasteX",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jabu2/PasteX.git"
+  },
+  "keywords": [
+    "pastebin"
+  ],
+  "author": "Dominik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jabu2/PasteX/issues"
+  },
+  "homepage": "https://github.com/Jabu2/PasteX#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
