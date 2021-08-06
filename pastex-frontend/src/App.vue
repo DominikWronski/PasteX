@@ -31,4 +31,3 @@ h1 {
 }
 
 </style>
-//todo: paste expiration, paste visibility
