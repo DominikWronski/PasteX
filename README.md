@@ -1,5 +1,5 @@
 Todo:
-- [] paste expiration
-- [] paste visibility
-- [] syntax highlighting
-- diff
+- [ ] paste expiration
+- [ ] paste visibility
+- [ ] syntax highlighting
+- [ ] diff
