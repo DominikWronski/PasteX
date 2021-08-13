@@ -30,7 +30,7 @@
 
       <p class="mt-2">Your paste will be impossible to delete/edit because you are not logged in.</p>
 
-      <b-form-checkbox required class="mb-2 mr-sm-2 mb-sm-0">I have read the terms of use and accept it</b-form-checkbox>
+      <b-form-checkbox required class="mb-2 mr-sm-2 mb-sm-0">I have read the terms of service and accept it</b-form-checkbox>
 
         <b-button class="mt-3" variant="dark">Create new paste</b-button>
 
