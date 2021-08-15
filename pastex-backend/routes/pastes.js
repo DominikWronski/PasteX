@@ -8,4 +8,9 @@ router.get('/',
     PasteController.getPastes
 );
 
+// Get specific paste
+router.get('/:id',
+    PasteController.getPaste
+);
+
 module.exports = router;

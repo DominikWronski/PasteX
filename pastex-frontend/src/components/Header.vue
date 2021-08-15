@@ -7,8 +7,8 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="#"><router-link style="text-decoration: none; color: inherit;" to="/">Home</router-link></b-nav-item>
-            <b-nav-item href="#"><router-link style="text-decoration: none; color: inherit;" to="/add-paste">Add paste</router-link></b-nav-item>
+            <b-nav-item><router-link style="text-decoration: none; color: inherit;" to="/">Home</router-link></b-nav-item>
+            <b-nav-item><router-link style="text-decoration: none; color: inherit;" to="/add-paste">Add paste</router-link></b-nav-item>
             <!-- <b-nav-item href="#" disabled>Disabled</b-nav-item> -->
           </b-navbar-nav>
 

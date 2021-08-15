@@ -11,7 +11,7 @@
             <b-card-text>
               {{paste.body}}
             </b-card-text>
-            <b-button href="#" variant="dark">Go to paste</b-button>
+            <router-link style="text-decoration: none; color: inherit;" :to="{name: 'Paste', params: {id: paste._id}}"><b-button variant="dark">Go to paste</b-button></router-link>
           </b-card>
         </div>
       </div>
