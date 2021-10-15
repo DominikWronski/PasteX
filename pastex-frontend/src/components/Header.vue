@@ -12,9 +12,9 @@
             <!-- <b-nav-item href="#" disabled>Disabled</b-nav-item> -->
           </b-navbar-nav>
 
-          <b-navbar-nav class="ml-auto">
+          <b-navbar-nav class="ml-auto" v-if="$store.state.token">
+
             <b-nav-item-dropdown right>
-              <!-- Using 'button-content' slot -->
               <template #button-content>
                 <em>User</em>
               </template>
@@ -22,6 +22,12 @@
               <b-dropdown-item href="#">Sign Out</b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
+
+          <b-navbar-nav class="ml-auto" v-else>
+            <b-nav-item><router-link style="text-decoration: none; color: inherit;" to="/login">Login</router-link></b-nav-item>
+            <b-nav-item><router-link style="text-decoration: none; color: inherit;" to="/register">Register</router-link></b-nav-item>
+          </b-navbar-nav>
+
         </b-collapse>
       </b-navbar>
     </div>

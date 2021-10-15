@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="addPaste">
     <h1 class="mt-5">Add new paste</h1>
 
     <div class="col d-flex justify-content-center mt-4">
