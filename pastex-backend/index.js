@@ -18,9 +18,15 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 
+// Body parser
+app.use(express.json());
+app.use(express.urlencoded());
+
 // Routes
 const pastesRoute = require('./routes/pastes')
 app.use('/api/v1/pastes', pastesRoute);
+const usersRoute = require('./routes/users')
+app.use('/api/v1/users', usersRoute);
 
 app.listen(8081, () => {
     console.log('Server listening on 8081');
