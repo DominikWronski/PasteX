@@ -15,7 +15,7 @@
       </div>
       <h3 class="mt-5">Raw paste data</h3>
       <div class="col d-flex justify-content-center mt-4">
-        <b-form-textarea
+        <b-form-textarea readonly
           style="max-width: 100rem; min-width: 100rem;"
           id="textarea"
           :value="this.paste.body"

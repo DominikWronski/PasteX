@@ -20,7 +20,7 @@ app.use(cors());
 
 // Body parser
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 
 // Routes
 const pastesRoute = require('./routes/pastes')
