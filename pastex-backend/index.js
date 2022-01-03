@@ -1,6 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+// Init config
+const dotenv = require('dotenv');
+dotenv.config();
+
 // Connect, test database
 mongoose.connect('mongodb://localhost:27017/pastex', {useNewUrlParser: true, useUnifiedTopology: true});
 let db = mongoose.connection;

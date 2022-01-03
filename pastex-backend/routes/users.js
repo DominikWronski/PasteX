@@ -8,4 +8,9 @@ router.post('/register',
     UserController.register
 );
 
+// Login to a user account
+router.post('/login',
+    UserController.login
+);
+
 module.exports = router;

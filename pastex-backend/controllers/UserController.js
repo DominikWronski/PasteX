@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 module.exports = {
     // @desc Register new user account
-    // @route GET /api/v1/users/
+    // @route GET /api/v1/users/register
     // @access Public
     async register (req, res) {
         const userExists = await User.findOne({ email: req.body.email});
@@ -29,4 +29,29 @@ module.exports = {
             res.status('409').send('This user already exists.')
         }
     },
+    // @desc Login to a user account
+    // @route GET /api/v1/users/login
+    // @access Public
+    async login (req, res) {
+        try {
+            const user = await User.findOne({ username: req.body.username});
+            if(!user) {
+                // res.status('404').send('There is no such user.')
+                res.status('403').send('Username or password is wrong.');
+            } else {
+                const isPasswordValid = await user.comparePassword(req.body.password);
+                if(!isPasswordValid) {
+                    res.status('403').send('Username or password is wrong.');
+                } else {
+                    const token = jwt.sign({ id: user._id, username: user.username, isAdmin: user.isAdmin}, process.env.TOKEN_SECRET, {expiresIn: 86400})
+                    // res.status('200').send('Successfully logged in.');
+                    res.status('200').send(token);
+                }
+            }
+        } catch (err) {
+            
+        }
+    },
+
+
 }

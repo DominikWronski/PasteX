@@ -1,4 +1,4 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 let userSchema = mongoose.Schema({
@@ -20,6 +20,17 @@ let userSchema = mongoose.Schema({
         default: false
     }
 })
+
+// userSchema.methods.comparePassword = function(password, callback) {
+//     bcrypt.compare(password, this.password, function(err, isMatch) {
+//         if (err) return callback(err);
+//         callback(null, isMatch);
+//     });
+// };
+
+userSchema.methods.comparePassword = async function(password) {
+    return await bcrypt.compare(password, this.password);
+};
 
 userSchema.pre('save', function(next) {
     return bcrypt.hash(this.password, 10)
