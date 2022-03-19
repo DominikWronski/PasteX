@@ -2,7 +2,7 @@
   <div class="login">
     <h1 class="mt-5">Login</h1>
         <div class="col d-flex justify-content-center mt-4">
-            <b-form style="width: 25%">
+            <b-form style="width: 35%">
                 <b-form-group
                     label="Username:"
                     >
@@ -61,6 +61,7 @@ export default {
           })
           this.$store.dispatch('setToken', response.data.token)
           this.$store.dispatch('setUser', response.data.user)
+          console.log(response.data.user)
           this.$router.push('/')
         } else {
           this.errors.push('Fields cannot be blank.')

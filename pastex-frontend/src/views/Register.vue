@@ -2,7 +2,7 @@
   <div class="login">
     <h1 class="mt-5">Register</h1>
         <div class="col d-flex justify-content-center mt-4">
-            <b-form style="width: 25%">
+            <b-form style="width: 35%">
                 <b-form-group
                     label="Username:"
                     >

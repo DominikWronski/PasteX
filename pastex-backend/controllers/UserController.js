@@ -43,9 +43,10 @@ module.exports = {
                 if(!isPasswordValid) {
                     res.status('403').send('Username or password is wrong.');
                 } else {
-                    const token = jwt.sign({ id: user._id, username: user.username, isAdmin: user.isAdmin}, process.env.TOKEN_SECRET, {expiresIn: 86400})
+                    const userJSON = user.toJSON();
+                    const token = jwt.sign({ userJSON }, process.env.TOKEN_SECRET, {expiresIn: 86400})
                     // res.status('200').send('Successfully logged in.');
-                    res.status('200').send(token);
+                    res.status('200').send({user: userJSON, token: token});
                 }
             }
         } catch (err) {
